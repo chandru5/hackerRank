@@ -46,25 +46,7 @@ function merge($left, $right, $p) {
 /**
  * Sample #1
  */
-// $arr = array(0, 1, 2, 4, 6, 5, 3);
-
-// $result = findMedian($arr);
-// echo $result;
-// return;
-
-$fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
-$stdin = fopen("php://stdin", "r");
-
-fscanf($stdin, "%d\n", $n);
-
-fscanf($stdin, "%[^\n]", $arr_temp);
-
-$arr = array_map('intval', preg_split('/ /', $arr_temp, -1, PREG_SPLIT_NO_EMPTY));
+$arr = array(0, 1, 2, 4, 6, 5, 3);
 
 $result = findMedian($arr);
-
-fwrite($fptr, $result . "\n");
-
-fclose($stdin);
-fclose($fptr);
+echo $result;
